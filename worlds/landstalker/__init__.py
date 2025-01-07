@@ -32,7 +32,8 @@ class LandstalkerWorld(World):
     game = "Landstalker - The Treasures of King Nole"
     options_dataclass = LandstalkerOptions
     options: LandstalkerOptions
-    required_client_version = (0, 4, 4)
+    required_client_version = (0, 6, 0)
+    data_version = 1
     web = LandstalkerWeb()
 
     item_name_to_id = build_item_name_to_id_table()
@@ -62,7 +63,7 @@ class LandstalkerWorld(World):
             "combat_difficulty", "teleport_tree_requirements", "shuffle_trees", "ensure_ekeeke_in_shops",
             "remove_gumi_boulder", "allow_whistle_usage_behind_trees", "handle_damage_boosting_in_logic",
             "handle_enemy_jumping_in_logic", "handle_tree_cutting_glitch_in_logic", "hint_count", "death_link",
-            "revive_using_ekeeke",
+            "revive_using_ekeeke", "open_greenmaze_shortcut"
         ]
 
         slot_data = self.options.as_dict(*options)
